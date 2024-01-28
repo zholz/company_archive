@@ -1,0 +1,13 @@
+<h2>Document List</h2>
+<a href="{% url 'document_new' %}">New Document</a>
+<ul>
+    {% for document in documents %}
+    <li>
+        <a href="{% url 'document_detail' document.pk %}">{{ document.title }}</a>
+        <a href="{% url 'document_edit' document.pk %}">Edit</a>
+        <a href="{% url 'document_delete' document.pk %}">Delete</a>
+    </li>
+    {% empty %}
+    <li>No documents available.</li>
+    {% endfor %}
+</ul>
