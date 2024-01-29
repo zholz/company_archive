@@ -1,0 +1,197 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #bbb 1px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    background-color: #e8491d;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #e8491d;
+}
+.action-button {
+    padding: 5px 10px;
+    margin: 2px;
+    border: 1px solid #333; /* Black border */
+    background-color: white;
+    text-decoration: none;
+    color: #333; /* Black text */
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #333; /* Black background on hover */
+    color: white; /* White text on hover */
+}
+
+.edit-button {
+    border-color: #4CAF50; /* Green border for edit */
+}
+
+.edit-button:hover {
+    background-color: #4CAF50; /* Green background on hover */
+}
+
+.delete-button {
+    border-color: #f44336; /* Red border for delete */
+}
+
+.delete-button:hover {
+    background-color: #f44336; /* Red background on hover */
+}
+
+.save-button, .back-button, .cancel-button {
+    /* Styles for these buttons */
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.save-button:hover {
+    background-color: #4CAF50; /* Green background for save */
+    color: white;
+}
+
+.back-button:hover, .cancel-button:hover {
+    background-color: #e8491d; /* Red background for cancel and back */
+    color: white;
+}
+
+.pagination {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.pagination .step-links a {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.pagination .step-links a:hover {
+    background-color: #555;
+}
+
+.pagination .current {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #e8491d;
+    color: white;
+    border-radius: 4px;
+}
+
+

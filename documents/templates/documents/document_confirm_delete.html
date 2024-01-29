@@ -1,6 +1,9 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+
 <h2>Are you sure you want to delete "{{ document.title }}"?</h2>
-<form method="post">
+<form method="post" class="form-style">
     {% csrf_token %}
-    <button type="submit">Confirm</button>
-    <a href="{% url 'document_list' %}">Cancel</a>
+    <button type="submit" class="action-button delete-button">Confirm</button>
+    <a href="{% url 'document_list' %}" class="action-button cancel-button">Cancel</a>
 </form>

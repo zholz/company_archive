@@ -1,13 +1,52 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+
 <h2>Document List</h2>
-<a href="{% url 'document_new' %}">New Document</a>
-<ul>
+<a href="{% url 'document_new' %}" class="action-button new-button">New Document</a>
+
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
     {% for document in documents %}
-    <li>
-        <a href="{% url 'document_detail' document.pk %}">{{ document.title }}</a>
-        <a href="{% url 'document_edit' document.pk %}">Edit</a>
-        <a href="{% url 'document_delete' document.pk %}">Delete</a>
-    </li>
+    <tr>
+        <td>
+            <a href="{% url 'document_detail' document.pk %}">{{ document.title }}</a>
+        </td>
+        <td>
+            <a href="{% url 'document_edit' document.id %}" class="action-button edit-button">Edit</a>
+            <a href="{% url 'document_delete' document.id %}" class="action-button delete-button">Delete</a>
+        </td>
+    </tr>
     {% empty %}
-    <li>No documents available.</li>
+    <tr>
+        <td colspan="2">No documents available.</td>
+    </tr>
     {% endfor %}
-</ul>
+    </tbody>
+</table>
+
+<div class="pagination">
+    {% if documents.has_previous %}
+    <a href="?page={{ documents.previous_page_number }}">previous</a>
+    {% endif %}
+
+    {% for num in documents.paginator.page_range %}
+    {% if documents.number == num %}
+    <strong>{{ num }}</strong>
+    {% else %}
+    <a href="?page={{ num }}">{{ num }}</a>
+    {% endif %}
+    {% endfor %}
+
+    {% if documents.has_next %}
+    <a href="?page={{ documents.next_page_number }}">next</a>
+    {% endif %}
+</div>
+
+
+

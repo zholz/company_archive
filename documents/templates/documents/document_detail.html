@@ -1,3 +1,6 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+
 <h2>{{ document.title }}</h2>
 <p>{{ document.content }}</p>
-<a href="{% url 'document_list' %}">Back to list</a>
+<a href="{% url 'document_list' %}" class="action-button back-button">Back to list</a>

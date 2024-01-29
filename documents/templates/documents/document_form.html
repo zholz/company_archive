@@ -1,6 +1,9 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+
 <h2>{% if object %}Edit{% else %}New{% endif %} Document</h2>
-<form method="post">
+<form method="post" class="form-style">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Save</button>
+    <button type="submit" class="action-button save-button">Save</button>
 </form>
